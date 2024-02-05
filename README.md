@@ -1,2 +1,0 @@
-## Awesome-AIGC-Info
-
