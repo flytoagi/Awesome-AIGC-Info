@@ -66,3 +66,59 @@ Now, you can create your first MDX page as `pages/index.mdx`:
 Hello, world!
 ```
 And run the next or next dev command specified in package.jsonto start developing the project! 🎉
+
+# Add I18n Config
+## Add Config
+To add multi-language pages to your Nextra application, you need to config i18n in `next.config.js` first:
+
+```js
+next.config.js
+const withNextra = require('nextra')({
+  theme: 'nextra-theme-docs',
+  themeConfig: './theme.config.tsx'
+})
+ 
+module.exports = withNextra({
+  i18n: {
+    locales: ['en-US', 'zh-CN', 'de-DE'],
+    defaultLocale: 'en-US'
+  }
+})
+```
+
+## Add Middleware
+Then, you need to add a `middleware.js` file in the root of your project (related Next.js docs):
+```js
+export { locales as middleware } from 'nextra/locales'
+```
+If you already have the middleware defined, you can do this instead:
+
+```js
+import { withLocales } from 'nextra/locales'
+ 
+export const middleware = withLocales(request => {
+  // Your middleware code...
+})
+```
+Add Locale to Filenames
+Then, add the locale codes to your file extensions (required for the default locale too):
+
+/pages
+  _meta.en-US.json
+  _meta.zh-CN.json
+  _meta.de-DE.json
+  index.en-US.md
+  index.zh-CN.md
+  index.de-DE.md
+  ...
+
+Configure the Docs Theme
+Finally, add the i18n option to your theme.config.jsx to configure the language dropdown:
+
+theme.config.jsx
+i18n: [
+  { locale: 'en-US', text: 'English' },
+  { locale: 'zh-CN', text: '中文' },
+  { locale: 'de-DE', text: 'Deutsch' },
+  { locale: 'ar-SA', text: 'العربية', direction: 'rtl' }
+]
