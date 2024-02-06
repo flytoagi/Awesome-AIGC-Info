@@ -18,7 +18,6 @@ const withNextra = require('nextra')({
   basePath: basePath,
   assetPrefix: assetPrefix,
   output: 'export',
-  distDir: 'dist',
 })
 
 module.exports = {
@@ -28,8 +27,10 @@ module.exports = {
       defaultLocale: 'zh-CN'
     },
     
-  }
-  )
+  }),
+  images: {
+    unoptimized: true,
+  },
 }
 
 // If you have other Next.js configurations, you can pass them as the parameter:
