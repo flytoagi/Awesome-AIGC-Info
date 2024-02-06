@@ -139,6 +139,7 @@ export default {
       <>
       <div>
         {is_en_Inpath ? "Last updated: "+readableDate : "最后更新: "+readableDate}
+        {}
       </div>
       </>
     )

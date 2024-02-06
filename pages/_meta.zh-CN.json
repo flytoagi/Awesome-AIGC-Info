@@ -2,11 +2,11 @@
     "index": {
         "title": "首页",
         "theme": {
-            "breadcrumb": false,
+            "breadcrumb": true,
             "footer": true,
-            "sidebar": false,
+            "sidebar": true,
             "toc": true,
-            "pagination": false
+            "pagination": true
           }
     },
     "official_account": {
@@ -16,8 +16,12 @@
     "llm-model": {
         "title": "大模型",
         "theme": {
-            "typesetting": "article"
+            "typesetting": "article",
+            "toc": false
           }
+    },
+    "aigc-startup": {
+        "title": "AIGC 创业副业机会"
     },
     "----": {
         "type": "separator"
