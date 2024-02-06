@@ -23,7 +23,10 @@ jobs:
     - name: 打包  ️
       run: |
         yarn build
+        yarn next export # 增加这一行来导出静态网站
         touch out/.nojekyll
+    
+
         
     - name: 部署  
       uses: JamesIves/github-pages-deploy-action@v4
