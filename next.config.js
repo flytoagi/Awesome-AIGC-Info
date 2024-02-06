@@ -17,8 +17,6 @@ const withNextra = require('nextra')({
   staticImage: true,
   basePath: basePath,
   assetPrefix: assetPrefix,
-  output: 'export',
-  distDir: 'dist',
 })
 
 module.exports = {
