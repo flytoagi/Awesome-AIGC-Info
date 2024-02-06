@@ -62,6 +62,7 @@ export default {
       'https://info.ai4agi.org' +
       (defaultLocale === locale ? asPath : `/${locale}${asPath}`)
 
+
     return (
       <>
         <meta property="og:url" content={url} />
@@ -70,6 +71,16 @@ export default {
           property="og:description"
           content={frontMatter.description || 'The next site builder'}
         />
+        {/* 插入统计脚本 */}
+        <script dangerouslySetInnerHTML={{ __html: `
+          var _hmt = _hmt || [];
+          (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?40144893c16f6071c64623bc56286838";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+          })();
+        ` }} />
       </>
     )
   },
@@ -82,11 +93,10 @@ export default {
   //   )
   // },
   sidebar: {
-    defaultMenuCollapseLevel: 3,
+    defaultMenuCollapseLevel: 1,
     autoCollapse: true,
     toggleButton: true,
     titleComponent({ title, type }) {
-      console.log(title, type)
       if (type === 'separator') {
         return (
           <div style={{ background: 'cyan', textAlign: 'center' }}>{title}</div>
@@ -94,15 +104,15 @@ export default {
       }
       if (title === 'official_account' | title === "公众号") {
         return <>
-        <svg 
-        width="24" height="24"
-        viewBox="0 0 24 24" ><title>WeChat</title>
-        <path 
-        fill="currentColor"
-        d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.01-.27-.027-.407-.03zm-2.53 3.274c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982z"/>
-        </svg> {title}</>
+          <svg
+            width="24" height="24"
+            viewBox="0 0 24 24" ><title>WeChat</title>
+            <path
+              fill="currentColor"
+              d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.01-.27-.027-.407-.03zm-2.53 3.274c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982z" />
+          </svg> {title}</>
       }
-      if (title === 'home' | title === '首页'){
+      if (title === 'home' | title === '首页') {
         return <>🏠 {title}</>
       }
       if (title === 'about' | title === "关于我们") {
@@ -111,29 +121,47 @@ export default {
       if (title === 'contact' | title === "联系我们") {
         return <>📧 {title}</>
       }
-      
-      return <>👉 {title}</>
+
+      return <>{title}</>
     }
   },
   navigation: {
     prev: true,
     next: true
   },
-  gitTimestamp: (
-    <div>
-      time
-    </div>
-  ),
+  gitTimestamp({timestamp}){
+    const router = useRouter();
+    const is_en_Inpath = router.asPath.includes('en-US')
+    console.log(timestamp)
+    const readableDate = new Date(timestamp).toLocaleString();
+    // console.log(window.location.href)
+    return(
+      <>
+      <div>
+        {is_en_Inpath ? "Last updated: "+readableDate : "最后更新: "+readableDate}
+      </div>
+      </>
+    )
+  },  
   toc: {
-
     title: "On This Page",
     float: true,
-    backToTop: true
+    backToTop: true,
+    component: (
+      <div>
+        <p>Table of Contents</p>
+      </div>
+    ),
+    extraContent: (
+      <div>
+        <p>Extra content</p>
+      </div>
+    )
   },
   feedback: {
     content: (
       <div>
-
+        <p>Question? Give us feedback →</p>
       </div>
     ),
     labels: "Feedback",
@@ -147,6 +175,7 @@ export default {
         </a>
         .
       </span>
+
     )
   },
   darkMode: true,
