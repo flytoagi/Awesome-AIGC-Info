@@ -1,0 +1,6 @@
+{
+    "base-llm": "通用文本底座大模型",
+    "chinese-base-llm": "中文底座大模型",
+    "chinese-v-base-llm": "中文多模型大模型",
+    "eval-llm": "LLM测评"
+}

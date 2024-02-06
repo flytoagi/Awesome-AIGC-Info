@@ -1,0 +1,206 @@
+{
+    "models": [
+        {
+            "name": "ChatGLM",
+            "model_name": "",
+            "type": "text",
+            "model_size": "6B",
+            "is_chinese": true,
+            "submitted_at": "2023-01-02",
+            "organization": "THUDM",
+            "url": "https://github.com/THUDM/ChatGLM-6B",
+            "hugging_face_url": "https://huggingface.co/THUDM/chatglm-6b",
+            "description": "中文领域效果最好的开源底座模型之一，针对中文问答和对话进行了优化。经过约1T标识符的中英双语训练，辅以监督微调、反馈自助、人类反馈强化学习等技术的加持。",
+            "features": {
+                "optimization_focus": "中文问答和对话",
+                "training_data": "约1T标识符的中英双语",
+                "techniques": [
+                    "监督微调",
+                    "反馈自助",
+                    "人类反馈强化学习"
+                ]
+            }
+        },
+        {
+            "name": "Qwen-7B-Chat",
+            "model_name": "",
+            "type": "text",
+            "model_size": "7B",
+            "is_chinese": true,
+            "submitted_at": "2023-01-01",
+            "url": "https://github.com/THUDM/ChatGLM-6B",
+            "hugging_face_url": "https://huggingface.co/THUDM/chatglm-6b",
+            "description": "中文领域效果最好的开源底座模型之一，针对中文问答和对话进行了优化。经过约1T标识符的中英双语训练，辅以监督微调、反馈自助、人类反馈强化学习等技术的加持。",
+            "features": {
+                "optimization_focus": "中文问答和对话",
+                "training_data": "约1T标识符的中英双语",
+                "techniques": [
+                    "监督微调",
+                    "反馈自助",
+                    "人类反馈强化学习"
+                ]
+            }
+        },
+        {
+            "name": "Qwen-7B-Chat",
+            "model_name": "",
+            "type": "text",
+            "model_size": "7B",
+            "is_chinese": true,
+            "submitted_at": "2023-01-04",
+            "url": "https://github.com/THUDM/ChatGLM-6B",
+            "hugging_face_url": "https://huggingface.co/THUDM/chatglm-6b",
+            "description": "中文领域效果最好的开源底座模型之一，针对中文问答和对话进行了优化。经过约1T标识符的中英双语训练，辅以监督微调、反馈自助、人类反馈强化学习等技术的加持。",
+            "features": {
+                "optimization_focus": "中文问答和对话",
+                "training_data": "约1T标识符的中英双语",
+                "techniques": [
+                    "监督微调",
+                    "反馈自助",
+                    "人类反馈强化学习"
+                ]
+            }
+        },
+        {
+            "name": "Qwen-7B-Chat",
+            "model_name": "",
+            "type": "text",
+            "model_size": "7B",
+            "is_chinese": true,
+            "submitted_at": "2023-01-19",
+            "url": "https://github.com/THUDM/ChatGLM-6B",
+            "hugging_face_url": "https://huggingface.co/THUDM/chatglm-6b",
+            "description": "中文领域效果最好的开源底座模型之一，针对中文问答和对话进行了优化。经过约1T标识符的中英双语训练，辅以监督微调、反馈自助、人类反馈强化学习等技术的加持。",
+            "features": {
+                "optimization_focus": "中文问答和对话",
+                "training_data": "约1T标识符的中英双语",
+                "techniques": [
+                    "监督微调",
+                    "反馈自助",
+                    "人类反馈强化学习"
+                ]
+            }
+        },
+        {
+            "name": "Qwen-7B-Chat",
+            "model_name": "",
+            "type": "text",
+            "model_size": "7B",
+            "is_chinese": true,
+            "submitted_at": "2023-01-01",
+            "url": "https://github.com/THUDM/ChatGLM-6B",
+            "hugging_face_url": "https://huggingface.co/THUDM/chatglm-6b",
+            "description": "中文领域效果最好的开源底座模型之一，针对中文问答和对话进行了优化。经过约1T标识符的中英双语训练，辅以监督微调、反馈自助、人类反馈强化学习等技术的加持。",
+            "features": {
+                "optimization_focus": "中文问答和对话",
+                "training_data": "约1T标识符的中英双语",
+                "techniques": [
+                    "监督微调",
+                    "反馈自助",
+                    "人类反馈强化学习"
+                ]
+            }
+        },
+        {
+            "name": "Qwen-7B-Chat",
+            "model_name": "",
+            "type": "text",
+            "model_size": "7B",
+            "is_chinese": true,
+            "submitted_at": "2023-01-01",
+            "url": "https://github.com/THUDM/ChatGLM-6B",
+            "hugging_face_url": "https://huggingface.co/THUDM/chatglm-6b",
+            "description": "中文领域效果最好的开源底座模型之一，针对中文问答和对话进行了优化。经过约1T标识符的中英双语训练，辅以监督微调、反馈自助、人类反馈强化学习等技术的加持。",
+            "features": {
+                "optimization_focus": "中文问答和对话",
+                "training_data": "约1T标识符的中英双语",
+                "techniques": [
+                    "监督微调",
+                    "反馈自助",
+                    "人类反馈强化学习"
+                ]
+            }
+        },
+        {
+            "name": "Qwen-7B-Chat",
+            "model_name": "",
+            "type": "text",
+            "model_size": "7B",
+            "is_chinese": true,
+            "submitted_at": "2023-01-01",
+            "url": "https://github.com/THUDM/ChatGLM-6B",
+            "hugging_face_url": "https://huggingface.co/THUDM/chatglm-6b",
+            "description": "中文领域效果最好的开源底座模型之一，针对中文问答和对话进行了优化。经过约1T标识符的中英双语训练，辅以监督微调、反馈自助、人类反馈强化学习等技术的加持。",
+            "features": {
+                "optimization_focus": "中文问答和对话",
+                "training_data": "约1T标识符的中英双语",
+                "techniques": [
+                    "监督微调",
+                    "反馈自助",
+                    "人类反馈强化学习"
+                ]
+            }
+        },
+        {
+            "name": "Qwen-7B-Chat",
+            "model_name": "",
+            "type": "text",
+            "model_size": "7B",
+            "is_chinese": true,
+            "submitted_at": "2023-01-01",
+            "url": "https://github.com/THUDM/ChatGLM-6B",
+            "hugging_face_url": "https://huggingface.co/THUDM/chatglm-6b",
+            "description": "中文领域效果最好的开源底座模型之一，针对中文问答和对话进行了优化。经过约1T标识符的中英双语训练，辅以监督微调、反馈自助、人类反馈强化学习等技术的加持。",
+            "features": {
+                "optimization_focus": "中文问答和对话",
+                "training_data": "约1T标识符的中英双语",
+                "techniques": [
+                    "监督微调",
+                    "反馈自助",
+                    "人类反馈强化学习"
+                ]
+            }
+        },
+        {
+            "name": "Qwen-7B-Chat",
+            "model_name": "",
+            "type": "text",
+            "model_size": "7B",
+            "is_chinese": true,
+            "submitted_at": "2023-01-01",
+            "url": "https://github.com/THUDM/ChatGLM-6B",
+            "hugging_face_url": "https://huggingface.co/THUDM/chatglm-6b",
+            "description": "中文领域效果最好的开源底座模型之一，针对中文问答和对话进行了优化。经过约1T标识符的中英双语训练，辅以监督微调、反馈自助、人类反馈强化学习等技术的加持。",
+            "features": {
+                "optimization_focus": "中文问答和对话",
+                "training_data": "约1T标识符的中英双语",
+                "techniques": [
+                    "监督微调",
+                    "反馈自助",
+                    "人类反馈强化学习"
+                ]
+            }
+        },
+        {
+            "name": "Qwen-7B-Chat",
+            "model_name": "",
+            "type": "text",
+            "model_size": "7B",
+            "is_chinese": true,
+            "submitted_at": "2023-01-01",
+            "url": "https://github.com/THUDM/ChatGLM-6B",
+            "hugging_face_url": "https://huggingface.co/THUDM/chatglm-6b",
+            "description": "中文领域效果最好的开源底座模型之一，针对中文问答和对话进行了优化。经过约1T标识符的中英双语训练，辅以监督微调、反馈自助、人类反馈强化学习等技术的加持。",
+            "features": {
+                "optimization_focus": "中文问答和对话",
+                "training_data": "约1T标识符的中英双语",
+                "techniques": [
+                    "监督微调",
+                    "反馈自助",
+                    "人类反馈强化学习"
+                ]
+            }
+        }
+
+    ]
+}

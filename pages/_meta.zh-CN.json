@@ -13,11 +13,17 @@
         "title": "公众号",
         "type": "page"
     },
+    "llm-model": {
+        "title": "大模型",
+        "theme": {
+            "typesetting": "article"
+          }
+    },
     "----": {
         "type": "separator"
     },
     "aigc-job": {
-        "title": "AIGC 求职",
+        "title": "AIGC 求职招聘",
         "type": "page"
     },
     "---": {

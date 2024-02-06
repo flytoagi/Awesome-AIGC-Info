@@ -1,0 +1,73 @@
+import fs from 'fs';
+import path from 'path';
+
+export default function Models({ models }) {
+  // Flex容器样式
+  const containerStyle = {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
+    alignItems: 'flex-start',
+    padding: '0 4%', // 增加左右的padding，为卡片组留出更多空间
+  };
+  // 卡片样式调整
+  const cardStyle = {
+    border: '1px solid #ddd',
+    borderRadius: '8px',
+    padding: '20px',
+    margin: '10px',
+    boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
+    flex: '1', // 让卡片可以伸缩以适应容器宽度
+    minWidth: '250px', // 设置卡片的最小宽度，以避免太窄
+    maxWidth: 'calc(50% - 20px)', // 设置卡片的最大宽度，以确保一行最多两个卡片
+    boxSizing: 'border-box',
+  };
+
+  const titleStyle = {
+    color: '#333',
+    textDecoration: 'none'
+  };
+
+  return (
+    <div style={containerStyle}>
+      <h1 style={{ width: '100%' }}>大模型列表</h1>
+      {models.map((model, index) => (
+        <div key={index} style={cardStyle}>
+          <h3 style={{ marginBottom: '10px' }}><a href={model.url} style={titleStyle}>{model.name}</a></h3>
+          <p>{model.description}</p>
+          <a href={model.url} style={{ marginRight: '10px' }}>GitHub链接</a>
+          <a href={model.hugging_face_url}>Hugging Face链接</a>
+          <div style={{ marginTop: '20px' }}>
+            <h4>特点</h4>
+            <p>优化焦点: {model.features.optimization_focus}</p>
+            <p>训练数据: {model.features.training_data}</p>
+            <p>技术: {model.features.techniques.join(', ')}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export async function getStaticProps() {
+  const filePath = path.join(process.cwd(), 'public','data', 'models.json');
+  const jsonData = fs.readFileSync(filePath);
+  const data = JSON.parse(jsonData);
+
+  // 按submitted_at字段对模型进行排序，确保日期较早的排在前面
+  const sortedModels = data.models.sort((a, b) => new Date(a.submitted_at) - new Date(b.submitted_at));
+
+  return {
+    props: {
+      models: sortedModels,
+    },
+  };
+}
+
+
+
+
+
+
+
+
