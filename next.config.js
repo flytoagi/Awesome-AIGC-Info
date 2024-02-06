@@ -17,8 +17,7 @@ const withNextra = require('nextra')({
   staticImage: true,
   basePath: basePath,
   assetPrefix: assetPrefix,
-  output: 'export',
-  distDir: 'dist'
+  
 })
 
 module.exports = {
@@ -27,17 +26,11 @@ module.exports = {
       locales: ['zh-CN', 'en-US'],
       defaultLocale: 'zh-CN'
     },
-    // domains: [{
-    //   domain: 'info.ai4agi.org',
-    //   defaultLocale: 'zh-CN'
-    // },
-    // {
-    //   domain: 'info.ai4agi.cn',
-    //   defaultLocale: 'zh-CN'
-    // }
-    // ]
+    
   }
   ),
+  output: 'export',
+  distDir: 'dist',
   images: {
     unoptimized: true,
   },
