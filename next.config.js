@@ -17,7 +17,8 @@ const withNextra = require('nextra')({
   staticImage: true,
   basePath: basePath,
   assetPrefix: assetPrefix,
-  
+  output: 'export',
+  distDir: 'dist',
 })
 
 module.exports = {
@@ -28,12 +29,7 @@ module.exports = {
     },
     
   }
-  ),
-  output: 'export',
-  distDir: 'dist',
-  images: {
-    unoptimized: true,
-  },
+  )
 }
 
 // If you have other Next.js configurations, you can pass them as the parameter:
