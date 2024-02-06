@@ -1,6 +1,6 @@
 const isGithubActions = process.env.GITHUB_ACTIONS || false;
-const assetPrefix = "";
-const basePath = "";
+let assetPrefix = "";
+let basePath = "";
 
 if (isGithubActions) {
   // 去掉 `<owner>/`
