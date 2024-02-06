@@ -18,7 +18,7 @@ const withNextra = require('nextra')({
   basePath: basePath,
   assetPrefix: assetPrefix,
   output: 'export',
-  distDir: 'dist'
+  distDir: 'dist',
 })
 
 module.exports = {
@@ -27,20 +27,9 @@ module.exports = {
       locales: ['zh-CN', 'en-US'],
       defaultLocale: 'zh-CN'
     },
-    // domains: [{
-    //   domain: 'info.ai4agi.org',
-    //   defaultLocale: 'zh-CN'
-    // },
-    // {
-    //   domain: 'info.ai4agi.cn',
-    //   defaultLocale: 'zh-CN'
-    // }
-    // ]
+    
   }
-  ),
-  images: {
-    unoptimized: true,
-  },
+  )
 }
 
 // If you have other Next.js configurations, you can pass them as the parameter:
