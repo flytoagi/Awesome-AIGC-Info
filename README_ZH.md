@@ -9,10 +9,3 @@
 [![GitHub Repo stars](https://img.shields.io/github/stars/ai4agi/Awesome-AIGC-Info?style=social)](https://github.com/ai4agi/Awesome-AIGC-Info)
 
 English | [中文版](README_ZH.md)
-
-使用协议
-本仓库遵循 FastGPT Open Source License 开源协议。
-
-允许作为后台服务直接商用，但不允许提供 SaaS 服务。
-未经商业授权，任何形式的商用服务均需保留相关版权信息。
-完整请查看 FastGPT Open Source License
