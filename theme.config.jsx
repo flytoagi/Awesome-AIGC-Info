@@ -94,7 +94,7 @@ export default {
   //   )
   // },
   sidebar: {
-    defaultMenuCollapseLevel: 1,
+    defaultMenuCollapseLevel: 3,
     autoCollapse: true,
     toggleButton: true,
     titleComponent({ title, type }) {
