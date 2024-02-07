@@ -130,3 +130,41 @@ i18n: [
   { locale: 'de-DE', text: 'Deutsch' },
   { locale: 'ar-SA', text: 'العربية', direction: 'rtl' }
 ]
+
+
+# Add sitemap
+
+using [next-sitemap](https://www.npmjs.com/package/next-sitemap)
+
+```shell
+yarn add next-sitemap
+```
+
+next-sitemap requires a basic config file (`next-sitemap.config.js`) under your project root
+
+✅ next-sitemap will load environment variables from .env files by default.
+
+```js
+/** @type {import('next-sitemap').IConfig} */
+module.exports = {
+  siteUrl: process.env.SITE_URL || 'https://example.com',
+  generateRobotsTxt: true, // (optional)
+  // ...other options
+}
+```
+Building sitemaps
+Add next-sitemap as your postbuild script
+```js
+{
+  "build": "next build",
+  "postbuild": "next-sitemap"
+}
+```
+Custom config file
+You can also use a custom config file instead of next-sitemap.config.js. Just pass --config <your-config-file>.js to build command (Example: custom-config-file)
+```js
+{
+  "build": "next build",
+  "postbuild": "next-sitemap --config awesome-sitemap.config.js"
+}
+```
