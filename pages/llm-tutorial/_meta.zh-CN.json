@@ -1,0 +1,18 @@
+{
+    "llm-fintuning":{
+        "title": "1.大模型微调技术原理",
+        "type": "doc"
+    },
+    
+    "llm-fintuning-practical-guide":{
+        "title": "2.大模型微调实战",
+        "type": "doc",
+        "theme": {
+            "breadcrumb": true,
+            "footer": true,
+            "sidebar": true,
+            "toc": true,
+            "pagination": true
+        }
+    }
+}
